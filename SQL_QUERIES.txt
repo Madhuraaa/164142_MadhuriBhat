@@ -1,0 +1,214 @@
+Answers
+
+1) select * from dept;
+
+2) select * from emp;
+
+3) select * from emp
+   where deptno = 30;
+
+4) select ename,empno, deptno from emp
+   where ename ='CLARK';
+
+5) select deptno,ename from emp
+   where deptno >=20;
+
+6) select count(*) from emp
+    where comm>sal;
+
+7) select count(*) from emp
+   where comm >sal*1.6;
+
+8) select count(*) from emp
+   where comm >sal*1.5;
+
+9)  select deptno,ename from emp
+    where deptno=20 and sal>2000;
+
+10)  select ename,sal,job from emp
+      where job='SALESMAN' and sal>=1500;
+
+11)   select ename,job from emp
+      where job in('SALESMAN','MANAGER');
+
+12)   select ename , deptno from emp
+      where deptno=30 and job not in 'MANAGER';
+
+13)  select * from emp  
+     where job in('MANAGER','CLERK') and deptno=10;
+
+14)  select * from emp
+      where job='MANAGER'
+      or
+      job='CLERK' and deptno='10';
+
+15)  select * from emp
+     where job='MANAGER' and deptno='10'
+     or
+     job='CLERK' and deptno='20';
+
+16)  select * from emp
+     where job not in('CLERK' ,'MANAGER')
+     and sal>=2000;
+
+17)  select * from emp
+     where sal between 1200 and 1400;
+
+18)  select ename,job from emp
+     where job in ('CLERK','ANALYST','SALESMAN');
+
+19)  select ename,job from emp
+     where job not in ('CLERK','ANALYST','SALESMAN');
+
+20)  select ename ,comm from emp
+     where comm is null;
+
+21)  select ename, comm from emp
+     where comm is null ;
+
+22)  select ename , comm from emp
+     where comm>0;
+
+23) selet ename,comm from emp
+     where comm is null and comm<100;
+
+24) select ename,sal, sal+nvl(comm,250) as total from emp;
+
+25) select ename ,sal+comm as total_sal from emp
+    where sal+comm>2000;
+
+26) select ename from emp
+    where ename like 'M%';
+
+27)  select ename from emp
+     where ename like '%_M';
+
+28)  select ename from emp
+     where ename like '%M%';
+
+29)  select ename from emp
+     where ename like '____N';
+
+30)   select ename from emp
+      where ename like '__R%';
+
+2) Numeric, Cgharacters & Date Function
+
+31)   select hiredate from emp
+      where hiredate like '%FEB%';
+
+32)  select * from emp
+     where hiredate in(select last_day(hiredate) from emp);
+
+33)  select ename,hiredate from emp
+      where sysdate-hiredate>12;
+
+34)  select ename,hiredate from emp
+      where job='MANAGER' and
+      YEAR(hiredat) like '%2007%';
+
+35) select ename||','||job from emp;
+
+36)  select initcap(ename) from emp;
+
+37)  select rpad(ename,15) from emp;
+
+38)   select rpad(ename,15,'-') from emp;
+
+39)  select ename, length(ename) from emp;
+
+40)  select lpad(ename,10,'-')||replace(rpad(ename,10,'-'),ename) from emp;
+
+41) select trim (leading 'A' from ename) from emp;
+
+42)  select trim (trailing 'R' from ename) from emp;
+
+43)  select substr(ename,1,3) from emp;
+
+44)  select substr(ename,-3) from emp;
+
+45)  select replace (ename,'A','E') from emp;
+
+46)  select instr(ename,'AR' ,1,1) from emp;
+
+47)  select round(sal,-3) from emp;
+
+48)  select sal/30 as daily from emp;
+
+49)  select ename ,case when 0.2*sal>500 
+     then 500 else sal*0.2 end from emp;
+
+50)  select ename ,case when 0.2*sal>200 
+     then 200 else sal*0.2 end from emp;
+
+51)  select round(sysdate-hiredate,0) from emp;
+
+52)  select months_between(sysdate,hiredate) from emp;
+
+53)  
+
+54)
+
+55)  select ename from emp
+     group by ename
+     order by ename asc;
+
+56)   select ename, hiredate from emp
+      order by hiredate asc;
+
+57)   select ename,job,sal from emp
+       order by 2,3  asc;
+
+58)  
+
+
+59)  
+
+60)  select ename , extract(month from hiredate ) as month, extract(year from hireadte) as year
+    from emp 
+    order by extract(month from hiredate) ;
+
+
+61) select ename , extract(month from hiredate ) as month, extract(year from hireadte) as year
+    from emp 
+    order by extract(month from hiredate) asc, 
+    extract (year from hiredat) desc;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
