@@ -23,7 +23,8 @@ public class sample
 			    }
 			   } 
 			   
-      System.out.print(Arrays.toString(number));}}
+     } System.out.print(Arrays.toString(number));
+	}
 	void sort1()
 	{
 		int number1[]={200,300,500,100,350};
@@ -42,8 +43,8 @@ public class sample
 					   
 			    }
 			   } 
-			   
-     System.out.println(Arrays.toString(number1));}}
+		   }   
+     System.out.println(Arrays.toString(number1));}
 		
 		
 		
