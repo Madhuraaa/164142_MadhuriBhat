@@ -3,7 +3,7 @@ package datas;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class sample
+public class BubbleSort
 {
 	void sort()
 	{   int number[]={200,300,500,100,350};
@@ -51,9 +51,9 @@ public class sample
 	
 	
 	public static void main(String args[])
-	{   sample s1=new sample();
-	    s1.sort();
-	    s1.sort1();
+	{   BubbleSort b1=new BubbleSort();
+	    b1.sort();
+	    b1.sort1();
 	}
 		}
 
