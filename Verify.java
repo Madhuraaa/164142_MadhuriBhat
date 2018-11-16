@@ -35,7 +35,7 @@ public class Verify {
 
 	public static void main(String[] args) {
 		Verify character = new Verify();
-		character.userValidation();
+		Verify.userValidation();
 	}
 }
 
