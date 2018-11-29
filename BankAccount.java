@@ -1,67 +1,37 @@
-package com.madhuri.bank;//collection of logical classes
+package com.collect.sr;
 
-public class BankAccount {
-	//static variable
-	private static int autoAccountNo;
-	
-	
-	
-	//instance variable /class variable
-	//we cannot access instance variable if we are not creating object 
-	private  int accountNo;
-	private String accountHolderName;
-	private double accountBalance;
-	
-	//init block //executes well before construcctor
-	{
-		accountNo=++autoAccountNo;
+class BankAccount
+{
+	String AccountHolderName;
+	double AccountBalance;
+	int id;
+	public int getId() {
+		return id;
 	}
-	
-	//constructor overloading
-	//default constructor 
-	public BankAccount(){
-		
-		accountHolderName="Unknown";
-		accountBalance=0;
-		
+	public void setId(int id) {
+		this.id = id;
 	}
-	//Parameterized constructor
-	
-	public BankAccount(String accoutnHolderName,double accountBalance){
-	
-			this.accountHolderName = accountHolderName;
-		this.accountBalance=accountBalance;
-	
-		
-	}// setter---modifyng/reinitializing member value
-	public void setAccountHolderName(String accountHolderName) {
-		this.accountHolderName = accountHolderName;
+	public BankAccount(String accountHolderName, double accountBalance, int ID) {
+		super();
+		AccountHolderName = accountHolderName;
+		AccountBalance = accountBalance;
+		id = ID;
 	}
-	
-	//getter method  
-	public double getAccountBalance() {
-		return accountBalance;
-	}
-
-	public void setAccountBalance(double accountBalance) {
-		this.accountBalance = accountBalance;
-	}
-
 	public String getAccountHolderName() {
-		return accountHolderName;
+		return AccountHolderName;
 	}
-	//service method 
-   public void withdraw(double amount){
-	   this.accountBalance=amount;
-   }
-   public void deposit (double amount)
-   {
-	   
-   }
-	public static void main(String args[])
-	{   
-		BankAccount acc=new BankAccount();
+	public void setAccountHolderName(String accountHolderName) {
+		AccountHolderName = accountHolderName;
+	}
+	public double getAccountBalance() {
+		return AccountBalance;
+	}
+	public void setAccountBalance(double accountBalance) {
+		AccountBalance = accountBalance;
+	}
+	public String toString()
+	{
+		return "Bankholder_name:" + AccountHolderName+" "+"Account balance is" + AccountBalance+ "Customer id:"  + " " +id;
 		
 	}
-	
-}
+	}
