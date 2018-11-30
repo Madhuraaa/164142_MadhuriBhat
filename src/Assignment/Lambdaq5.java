@@ -2,21 +2,23 @@ package Assignment;
 
 public class Lambdaq5 {
 
- List<String> words = new ArrayList<>();
+ public static void main(String[] args)
+ {
 		  
-		  words.add("Patient");
-		  words.add("Admirable");
-		  words.add("Respected");
-		  words.add("Talented");
-		  words.add("Honest");
-		  words.add("Idealistic");
+		  
+		 List<String> words = new ArrayList<>();
+		  
+		  words.add("madhu");
+		  words.add("admirable");
+		  words.add("dance");
+		  words.add("hungry");
+		  words.add("useful");
+		  
 		  
 		  System.out.println(words+"\n");
 		  	  
 		  words.stream()
 		  .forEach(w->System.out.println(w.replaceAll(w, w.toUpperCase())));
-		  
-		  
 		  
 	}
 
